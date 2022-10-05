@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>LO-FI WAVE</title>
+</head>
+<body>
+     <section id="Introduction" class="base_section_css">
+        <header>
+             <div class="header_left">
+                lo-fi <span>wave</span>
+             </div>
+             <div class="header_right">
+                <span id="introduction_app" class="app_btn">app</span>
+                <span id="introduction_stream" class="stream_btn">stream</span>
+                <span id="introduction_community" class="community_btn">community</span>
+             </div>
+        </header>
+        <div class="Indroduction_main">
+            <div class="Introduction_main_left">
+               <img src="./assests/Ellipse 2.png" alt="" class="ellipse2">
+                <img src="./assests/girl.jpg" alt="" id="girl">
+                <img src="./assests/Ellipse 4.jpg" alt="" class="ellipse4">
+            </div>
+            <div class="Introduction_main_right">
+
+                <h1>calm your mind</h1>
+                <p>enjoy soothing and relaxing music with one click</p>
+                <button id="escape">ESCAPE</button>
+                <img src="./assests/Ellipse 6.jpg" alt="" id="ellipse6">
+                <div></div>
+            </div>
+        </div>
+     </section>
+     <section id="stream" class="base_section_css">
+        <header>
+            <div class="header_left">
+               lo-fi <span>wave</span>
+            </div>
+            <div class="header_right">
+                <span id="stream_app" class="app_btn">app</span>
+                <span id="stream_stream">stream</span>
+                <span id="stream_community" class="community_btn">community</span>
+            </div>
+       </header>
+        <div id="section_main">
+            <div class="escape_text">
+                <h1>ESCAPE</h1>
+                <span>without leaving home</span>
+            </div>
+            <img src="./assests/Group 5.png" alt="">
+        </div>
+        <footer>
+            <div class="footer_left">
+                <p>About us</p>
+                <p>Contact</p>
+            </div>
+            <div class="footer_right">
+                <p>Github</p>
+                <p>Codepen</p>
+            </div>
+        </footer>
+     </section>
+     <section id="community" class="base_section_css">
+        <header>
+            <div class="header_left">
+               lo-fi <span>wave</span>
+            </div>
+            <div class="header_right">
+                <span id="community_app" class="app_btn">app</span>
+                <span id="community_stream"  class="stream_btn">stream</span>
+                <span id="community_community">community</span>
+            </div>
+       </header>
+       <div id="community_main">
+         <div class="community_main_left">
+            <p>be a part of our exclusive community and never miss out on exclusive news</p>
+         </div>
+         <div class="community_main_right">
+            <div id="connect">connect</div>
+            <div id="fun">have fun</div>
+             <div class="form">
+                <label for="">lo-fi wave username:</label>
+                <input type="text">
+                <label for="">favourite mood:</label>
+                <input type="text">
+                <label for="">Email:</label>
+                <input type="text">
+                <button>LET'S LO-FI</button>
+             </div>
+         </div>
+       </div>
+       <footer>
+        <div class="footer_left">
+            <p>About us</p>
+            <p>Contact</p>
+        </div>
+        <div class="footer_right">
+            <p>Github</p>
+            <p>Codepen</p>
+        </div>
+    </footer>
+     </section>
+     <section class="base_section_css" id="app">
+        <header>
+            <div class="header_left">
+               lo-fi <span>wave</span>
+            </div>
+            <div class="header_right">
+                <span id="app_app">app</span>
+                <span id="app_stream"  class="stream_btn">stream</span>
+                <span id="app_community" class="community_btn">community</span>
+            </div>
+       </header>
+       <div id="app_main">
+         <img src="./assests/Group 12.png" alt="" id="lines">
+         <div class="appStores">
+            <div class="apple">
+                <img src="./assests/apple.png" alt="" class="stores_img">
+                <p>download on <br> app store</p>
+            </div>
+            <div class="apple">
+                <img src="./assests/google.png" alt="" class="stores_img">
+                <p>download on <br> play store</p>
+            </div>
+         </div>
+       </div>
+       <footer>
+        <div class="footer_left">
+            <p>About us</p>
+            <p>Contact</p>
+        </div>
+        <div class="footer_right">
+            <p>Github</p>
+            <p>Codepen</p>
+        </div>
+    </footer>
+     </section>
+     <section class="base_section_css" id="small_screen">
+         <img src="./assests/image_processing20210617-1932-5yr89h.jpg" alt="">
+     </section>
+     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+     <script>
+        var app=document.querySelector("#app");
+        var Introduction=document.querySelector("#Introduction");
+        var stream=document.querySelector("#stream");
+        var community=document.querySelector("#community");
+        app.style.display="none";
+        stream.style.display="none";
+        community.style.display="none";
+        $("#escape").click(function() {
+            Introduction.style.display="none";
+            stream.style.display="block";
+            document.title="LO-FI WAVE | STREAM"
+        })
+        $(".app_btn").click(function() {
+            app.style.display="block";
+            stream.style.display="none";
+            community.style.display="none";
+            Introduction.style.display="none";
+            document.title="LO-FI WAVE | APP"
+        })
+        $(".stream_btn").click(function() {
+            app.style.display="none";
+            stream.style.display="block";
+            community.style.display="none";
+            Introduction.style.display="none";
+            document.title="LO-FI WAVE | STREAM"
+        })
+        $(".community_btn").click(function() {
+            app.style.display="none";
+            stream.style.display="none";
+            community.style.display="block";
+            Introduction.style.display="none";
+            document.title="LO-FI WAVE | COMMUNITY"
+        })
+       
+         $(".header_left").click(function() {
+            app.style.display="none";
+            stream.style.display="none";
+            community.style.display="none";
+            Introduction.style.display="block";
+            document.title="LO-FI WAVE"
+         })
+     </script>
+</body>
+</html>
