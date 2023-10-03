@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGkm3hxSsNmGWbLtSCSUcewDk4QPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Data Upload Themes</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 20px;
+        }
+        .main {
+            margin: 10px;
+        }
+        button {
+            font-size: 20px;
+            margin-top: 20px;
+            width: 150px;
+            height: 40px;
+            text-transform: uppercase;
+            color: white;
+            background-color: #d65274;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #file {
+            margin-top: 10px;
+        }
+        header a {
+        text-decoration: none;
+        background-color: #d65241;
+        color: white;
+        margin: 10px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+      }
+      header a p {
+        margin: 0;
+        padding: 0;
+      }
+      header a:hover {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+      <div class="container justify-content-center align-items-center" id="signIn" style="height: 100vh; display: flex;">
+        <div style="background-color: white; width: 400px; height: 350px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;" class="p-3">
+           <h2 class="text-center mt-2">Login</h2>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email or Phone</label>
+              <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+           <div class="text-center mt-4">
+             <button type="submit" class="btn btn-primary w-50" id="signin_button">Submit</button>
+           </div>
+          
+        </div>
+      </div> 
+      <div id="container">
+      <header>
+        <a href="./Newsletter.html"><p>Data Upload Newsletter</p></a>
+        <!-- <a href="./UpdateMainNewsletterDoc.html"><p>Update Main Newsletter Doc</p></a> -->
+        <a href="./Themes.html"><p>Data Upload Themes</p></a>
+        <a href="./Prompts.html"><p>Data Upload Prompts</p></a>
+        <a href="./WordGames.html"><p>Data Upload Word Games</p></a>
+        <a href="./Games.html"><p>Data Upload Games</p></a>
+      </header>
+        <h1>Data Upload Themes</h1>
+        <input type="text" id="name" placeholder="name">
+        <div class="main">
+            <label for="">Text Color:</label>
+            <select name="" id="text_color">
+                <option value="#FFFFFF">#FFFFFF</option>
+                <option value="#000000">#000000</option>
+            </select>
+        </div>
+        <div class="main">
+            <label for="">Theme Color: </label>
+            <input type="text" id="theme_color">
+        </div>
+        <div class="main">
+            <label for="">Theme Shade: </label>
+            <select name="" id="theme_shade"> 
+                <option value="#FFFFFF">#FFFFFF</option>
+                <option value="#000000">#000000</option>
+            </select>
+        </div>
+        <input type="file" name="" id="file">
+        <button id="submit">Submit</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-storage.js"></script>
+    <script src="./DataUploadThemes/script.js"></script>
+</body>
+</html>
