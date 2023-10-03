@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jams | BootCamps</title>
+    <link rel="icon" href="./assets/Jams_logo.jpg">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Discover.css">
+    <link rel="stylesheet" href="./VirtualTrip/VirtualTrip.css">
+    <link rel="stylesheet" href="./Learning/Learning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&family=Overpass:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <style>
+      body {
+      background:url(./assets/type4_bg.png);
+      background-repeat: no-repeat;
+      background-size: 100vw;
+   }
+    #book_name {
+      text-align: center;
+      margin: 20px 0;
+      width: 90vw;
+    }
+   
+    </style>
+</head>
+<body>
+    <header class="Jam_header">
+        <div class="title">
+          <div class="title_left">
+            <img onclick="window.location.href='./Home.html'" style="cursor: pointer;" src="./assets/Jams_logo.jpg" alt=""
+              id="appLogo">
+            <h1 onclick="window.location.href='./Home.html'" style="cursor: pointer;">Jams<sup> <span style="font-size: x-small;">Beta</span></sup></h1>
+          </div>
+          <div class="title_right">
+            <div class="title_right_elements">
+
+            </div>
+            <!-- <img src="https://ui-avatars.com/api/?name=User&bold=true&length=1" alt="" id="userdpMain"> -->
+            <div id="userdpMain"></div>
+            <!-- <img src="./assets/invite.png" alt="" id="invite_logo"> -->
+          </div>
+        </div>
+    </header>
+      <div class="userdp_expand">
+        <p id="userdp_close">&#10006;</p>
+        <div id="profile">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h4>Profile</h4>
+        </div>
+        <div id="balance_container_btn">
+          <img src="./assets/balance_icon.png" alt="" width="30px" height="30px" style="margin-right: 5px;" loading="lazy">
+          <h4>Balance</h4>
+        </div>
+        <div>
+          <i class='fa fa-sign-out'></i>
+          <h4 class="logout">LogOut</h4>
+        </div>
+      </div>
+      <div class="self_profile_container_cover">
+        <div class="self_profile_container">
+             <div class="card__border_profile_self">
+             </div>
+              <h3 id="userNameInput_profile"></h3>
+             <hr>
+             <div class="about_me_dialog">
+              <div class="self_header_div">
+                <h4>About</h4>
+                <a href="" id="editAbout_btn" style="text-decoration: none;"> 
+                  <img src="./assets/pen.png" alt="" loading="lazy">
+                </a>
+              </div>
+              <p class="about_me_info_self"></p>
+               <textarea name="" id="aboutMeContainer_profile" cols="50" rows="3"></textarea>
+             </div>
+             <hr>
+             <div class="location_container_inside_Self">
+              <div class="self_header_div">
+                <h4>Location</h4>
+                <img src="./assets/pen.png" alt="" id="editLocation_btn" loading="lazy">
+              </div>
+               <p class="selfLocation_info"></p>
+             </div>
+             <hr>
+             <div class="education_container_inside_Self">
+              <div class="self_header_div">
+                <h4>Education</h4>
+                <img src="./assets/plus.png" alt="" id="editEducation_btn" loading="lazy">
+              </div>
+               <p class="selfEducation_info"></p>
+             </div>
+             <hr>
+             <div class="experience_container_inside_Self">
+              <div class="self_header_div">
+                <h4>Experience</h4>
+                <img src="./assets/plus.png" alt="" id="editExperience_btn" loading="lazy">
+              </div>
+               <p class="selfExperience_info"></p>
+             </div>
+             <hr>
+             <div class="skills_container_cover_insideSelf">
+              <div class="self_header_div">
+                <h4>Skills</h4>
+                <img src="./assets/pen.png" alt="" id="editskills_btn" loading="lazy">
+              </div>
+               <div class="skills_container_self"></div>
+             </div>
+             <hr>
+             <div class="goals_container_cover_insideSelf">
+              <div class="self_header_div">
+                <h4>Category</h4>
+                <img src="./assets/pen.png" alt="" id="editgoals_btn" loading="lazy">
+              </div>
+               <div class="goals_container_self"></div>
+             </div>
+             <hr>
+             <div class="lookingforSelf_container" style="display: none;">
+              <h4>Looking for</h4>
+              <img src="./assets/plus.png" alt="" id="editLookingfor_btn" loading="lazy">
+             </div>
+            </div>
+            <div class="connect_profile_btn_container">
+              <button class="saveUserDetails_profile_btn">Save</button>
+            </div>
+        <p id="selfprofile_container_close_button">&#10006;</p>
+      </div>
+      <!-- Edit education dialog  -->
+      <div class="changeEducation_container_cover">
+        <div class="changeEducation_container_inside">
+          <h4>Add Education Details: </h4>
+           <textarea name="" id="changeEducation_courseName" cols="30" rows="3" placeholder="Enter Course Name Here"></textarea>
+           <textarea name="" id="changeEducation_Institution" cols="30" rows="3" placeholder="Enter Institute Name Here"></textarea>
+           <button id="Save_changedEducationDetails_btn">Submit</button>
+        </div>
+        <p id="changeEducation_container_close_button">&#10006;</p>
+      </div>
+      <div class="EditEducation_container_cover">
+        <div class="EditEducation_container_inside">
+          <h4>Edit Education Details: </h4>
+           <textarea name="" id="EditEducation_courseName" cols="30" rows="3" placeholder="Enter Course Name Here"></textarea>
+           <textarea name="" id="EditEducation_Institution" cols="30" rows="3" placeholder="Enter Institute Name Here"></textarea>
+           <button id="Save_editedEducationDetails_btn">Submit</button>
+        </div>
+        <p id="EditEducation_container_close_button">&#10006;</p>
+      </div>
+      <div class="changeExperience_container_cover">
+        <div class="changeExperience_container_inside">
+          <h4>Add Experience Details: </h4>
+           <textarea name="" id="changeExperience_role" cols="30" rows="3" placeholder="Enter Role"></textarea>
+           <textarea name="" id="changeExperience_Institution" cols="30" rows="3" placeholder="Enter Organization Name Here"></textarea>
+           <button id="Save_changedExperienceDetails_btn">Submit</button>
+        </div>
+        <p id="changeExperience_container_close_button">&#10006;</p>
+      </div>
+      <div class="EditExperience_container_cover">
+        <div class="EditExperience_container_inside">
+          <h4>Edit Experience Details: </h4>
+           <textarea name="" id="EditExperience_role" cols="30" rows="3" placeholder="Enter Role"></textarea>
+           <textarea name="" id="EditExperience_Institution" cols="30" rows="3" placeholder="Enter Organization Name Here"></textarea>
+           <button id="Save_editedExperienceDetails_btn">Submit</button>
+        </div>
+        <p id="EditExperience_container_close_button">&#10006;</p>
+      </div>
+      <div class="changeLocation_container_cover">
+        <div class="changelocation_container_inside">
+          <h4>Select Your Location: </h4>
+          <div>
+            <label for="">Choose Your Country : </label>
+            <select name="" id="choose_Newcountry"></select>
+          </div>
+          <div>
+            <label for="">Choose Your City : </label>
+            <select name="" id="choose_Newcity"></select>
+          </div>
+          <button id="changeCountry_btn">Submit</button>
+        </div>
+        <p id="changeLocation_container_close_button">&#10006;</p>
+      </div>
+      <div class="roles_container_dialog">
+        <div class="changeroles_container">
+          <div class="select_role_div_change">
+            <h4>Select Skills: </h4>
+             
+          </div>
+        </div>
+        <button id="save_roles_btn">Submit</button>
+        <button id="save_requiredSkills_btn">Submit</button>
+        <p id="changeRoles_container_close_button">&#10006;</p>
+        <p id="requiredSkills_container_close_button">&#10006;</p>
+      </div>
+      <div class="goals_container_dialog">
+        <div class="changeGoals_container">
+          <div class="select_goals_div_change">
+           <h4>Select Category: </h4>
+             
+          </div>
+        </div>
+        <button id="save_goals_btn">Submit</button>
+        <p id="changeGoals_container_close_button">&#10006;</p>
+      </div>
+       <!-- header ends -->
+      <div class="trip_container" >
+        <div class="trip_container_left">
+           <h3 id="trip_details"></h3>
+           <div class="trip_duration_container">
+            <h4 id="trip_duration"></h4>
+             <h4 id="trip_cost"></h4>
+           </div>
+           <hr>
+           <div id="book_name"></div>
+           <div class="trip_table">
+              
+              
+           </div>
+           <div class="start_initial_btn_cover">
+             <button id="start_initial_btn">Start</button>
+           </div>
+          </div>
+
+        <div class="trip_container_right">
+          
+            <div id="homepage-slider">
+              <div class="slider-container">
+                  
+              </div>
+          </div>
+          <div class="coupon_code_div">
+            <label for="">Enter Coupon Code : </label>
+            <input type="text" id="coupon_code">
+          </div>
+            
+        </div>
+      </div>
+      <div class="country_selection_cover">
+        <div class="Country_selection_div">
+          <h3>Select Game: </h3>
+          <div class="countries_list_div">
+
+          </div>
+          
+        </div>
+        <button id="register_btn" style="width: 300px;">Register</button>
+        <p id="country_selection_cover_close_btn">&#10006;</p>
+       </div>
+      <div class="task_data_cover">
+        <div class="task_data_div">
+         
+          
+        </div>
+        <button id="task_data_btn">Next <i class='fa fa-arrow-right' style="font-size: 18px; margin-left: 10px;"></i></button>
+        <p id="task_data_cover_close_btn">&#10006;</p>
+       </div>
+      <div class="city_data_cover">
+        <div class="city_data_div">
+          <h3 id="city_name"></h3>
+         
+         <div id="hompage-slider2"> 
+           <div class="slider-container-custom">
+                    
+           </div>
+         </div>
+          
+          
+          <div id="hompage-slider3"> 
+            <div class="slider-container-video">
+                     
+            </div>
+          </div>
+        
+          <div id="city_details"></div>
+          <div id="fun_facts_div">
+
+          </div>
+        </div>
+        <button id="city_data_btn">Next <i class='fa fa-arrow-right' style="font-size: 18px; margin-left: 10px;"></i></button>
+        <p id="city_data_cover_close_btn">&#10006;</p>
+       </div>
+       <div class="coming_soon_cover">
+          <div class="coming_soon_container">
+            <lottie-player src="140610-coming-soon.json" background="transparent" speed="1"
+         style="width: 200px; height: 200px;z-index: 100; text-align: center; justify-content: center; align-items: center;"
+          loop autoplay></lottie-player>
+          </div>
+          <p id="coming_soon_cover_close_btn">&#10006;</p>
+       </div>
+       <div class="upload_file_container">
+        <div class="upload_file_div">
+         <h4>Complete the task by adding your file. </h4>
+         <div class="already_uploaded_files_container">
+           
+         </div>
+         <input type="file" name="" id="task_file_input" accept="application/pdf" max="25000000">
+         <button id="submit_task_file_btn">Submit </button>
+        </div>
+        <p id="upload_file_container_close_button">&#10006;</p>
+      </div>
+      <div class="type4_container_cover">
+         <div class="type4_container">
+           <h4>What do you want to do? </h4>
+           <div class="type4_div_p" id="type4_response_btn">
+               <div>
+                 <img src="./assets/text-editor.png" alt="" loading="lazy">
+               </div>
+               <div>
+                 <h4>Write Your Response</h4>
+                 <p>Add text to complete the write-up on topic of the module.</p>
+               </div>
+           </div>
+            
+           <div id="type4_file_btn" class="type4_div_p">
+             <div>
+               <img src="./assets/file.png" alt="" loading="lazy">
+             </div>
+             <div>
+               <h4>Upload A file</h4>
+               <p>Attach any file as a reference on topic of the module</p>
+             </div>
+           </div>
+         </div>
+         <p id="type4_container_close_button">&#10006;</p>
+      </div>
+      <div class="JamsMoney_container">
+        <div class="JamsMoney_div">
+         <h4>Jams Money Balance</h4>
+         <p id="jamsMoney_balance"></p>
+         <h4>Transactions</h4>
+         <div id="Transactions_div"></div>
+        </div>
+        <p id="jamsMoney_container_close_button">&#10006;</p>
+      </div>
+      <div class="not_enough_money_cover">
+        <div class="not_enough_money_div">
+           <h3>Learn and Earn</h3>
+           <p>You currently lack the necessary funds to undertake the desired course. But not to worry, as we've introduced an innovative 'Learn and Earn' initiative that allows you to earn while you study.</p>
+           <p>Here is how it works: </p>
+           <ol>
+            <li>Enroll in the program using your overall credit limit.</li>
+            <li>Progress through various course modules while continuing to learn.</li>
+            <li>Simultaneously complete predefined tasks to generate income</li>
+            <li>Utilize your earnings to cover your course fees and make money.</li>
+           </ol>
+           <button id="not_enough_money_submitBtn">Submit</button>
+        </div>
+        <p id="NoMoney_container_close_button">&#10006;</p>
+      </div>
+      <div id="loader" style="width: 100vw;height: 100vh;position: absolute;background: #F4FCFF; display: block; top: 0;">
+        <img src="./loader.gif" alt="" style="position: absolute;top:40%;left: 50%;width: 4em;">
+       </div>
+      <button id="NewCountry_btn">Change Bootcamp</button>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="firebase.js"></script>
+    <script src="header_profile.js"></script>
+    <script src="./VirtualTrip/Bootcamps.js"></script>
+    <script>
+    </script>
+</body>
+</html>
